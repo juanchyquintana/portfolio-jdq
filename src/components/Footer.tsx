@@ -1,12 +1,13 @@
-import { BsInstagram, BsTwitch, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
+import { getCurrentYear } from "../helpers";
+import { Link } from "react-router-dom";
 import pin from "../img/pin-svgrepo-com.svg";
 import mail from "../img/mail-svgrepo-com.svg";
-import { getCurrentYear } from "../helpers";
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-500 mx-auto my-5 space-y-10">
+    <footer className="border-t border-gray-500 mx-auto mt-5 space-y-10 w-full">
       <section className="container mx-auto flex justify-center mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center text-center space-y-5 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center justify-center">
@@ -26,7 +27,9 @@ function Footer() {
       <section className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-items-center ">
           <div className="text-center md:text-left">
-            <p className="uppercase font-bold text-center mb-2 text-indigo-600">Sobre Mí</p>
+            <p className="uppercase font-bold text-center mb-2 text-indigo-600">
+              Sobre Mí
+            </p>
             <p>Mi nombre es Juan Diego Quintana, Full-Stack Developer</p>
             <p>
               PittyDev es el reflejo de mi ilusión por crecer como profesional
@@ -53,31 +56,35 @@ function Footer() {
           </div>
 
           <div className="text-center md:text-left">
-            <p className="uppercase font-bold text-center mb-2 text-indigo-600">Pittydev</p>
+            <p className="uppercase font-bold text-center mb-2 text-indigo-600">
+              Pittydev
+            </p>
             <ul className="list-none">
               <li>
-                <a
-                  href="./pages/error.html"
-                  className="text-gray-600 hover:underline"
-                >
+                <Link to={"/aboutme"} className="text-gray-600 hover:underline">
                   Sobre Mí
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error.html"
+                <Link
+                  to={"/curriculum"}
                   className="text-gray-600 hover:underline"
                 >
-                  Política de Cookies
-                </a>
+                  Curriculum Vitae
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error.html"
+                <Link
+                  to={"/projects"}
                   className="text-gray-600 hover:underline"
                 >
-                  Política de Privacidad
-                </a>
+                  Proyectos
+                </Link>
+              </li>
+              <li>
+                <Link to={"/contact"} className="text-gray-600 hover:underline">
+                  Contacto
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,8 +127,8 @@ function Footer() {
       <section className="bg-black text-gray-500 text-center p-3">
         <div className="container mx-auto">
           <p className="text-sm italic">
-            {getCurrentYear()} - Building Software and Pages with ♥
-            from Tucumán, Argentina to the world 
+            {getCurrentYear()} - Building Software and Pages with ♥ from
+            Tucumán, Argentina to the world
           </p>
         </div>
       </section>

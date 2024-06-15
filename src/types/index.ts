@@ -4,5 +4,6 @@ export type ProjectsType = {
     description: string,
     technologies: string[],
     projectLink: string,
+    repositoryLink: string,
     role: string
 }

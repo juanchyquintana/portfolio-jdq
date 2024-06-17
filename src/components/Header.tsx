@@ -12,7 +12,7 @@ export default function Header() {
 
   const toggleDarkMode = () => {
     // TO DO: add function
-    console.log('Hooola')
+    console.log("Hooola");
   };
 
   return (
@@ -24,36 +24,52 @@ export default function Header() {
 
         <ul className="hidden items-center gap-1 md:flex">
           <li>
-            <Link
-              className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
               to={"/aboutme"}
             >
               Sobre Mí
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
               to={"/projects"}
             >
               Proyectos
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
               to={"/habilities"}
             >
               Habilidades
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
               to={"/contact"}
             >
               Contacto
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
@@ -101,36 +117,52 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="relative md:hidden"> 
+          <div className="relative md:hidden">
             <div className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm md:hidden">
               <div className="grid text-center">
-                <Link
-                  className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
                   to={"/aboutme"}
                 >
                   Sobre Mí
-                </Link>
+                </NavLink>
 
-                <Link
-                  className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
                   to={"/projects"}
                 >
                   Proyectos
-                </Link>
+                </NavLink>
 
-                <Link
-                  className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
                   to={"/habilities"}
                 >
                   Habilidades
-                </Link>
+                </NavLink>
 
-                <Link
-                  className="px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
                   to={"/contact"}
                 >
                   Contacto
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ function App() {
 
           <Route element={<Layouts />}>
             <Route path="/" element={<IndexPage />} index />
-            <Route path="/aboutme" element={<IndexPage />} />
+            {/* <Route path="/aboutme" element={<IndexPage />} /> */}
           </Route>
           
         </Routes>

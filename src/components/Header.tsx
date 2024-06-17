@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FiSun, FiMoon } from 'react-icons/fi';
-import pittyLogo from '../img/LogoPittyDev.png'
+import pittyLogo from "../img/LogoPittyDev.png";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,103 +11,162 @@ export default function Header() {
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    // TO DO: add function
+    console.log("Hooola");
   };
 
   return (
-    <header>
-      <nav className="bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-          <a
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img
-              src={pittyLogo}
-              className="h-20"
-              alt="Flowbite Logo"
-            />
-          </a>
+    <header className="md:mt-6">
+      <nav className="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6">
+        <Link className="shrink-0 text-blue-500" to={"/"}>
+          <img src={pittyLogo} alt="Logo de JDQ" className="h-20" />
+        </Link>
 
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <ul className="hidden items-center gap-1 md:flex">
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
+              to={"/aboutme"}
+            >
+              Sobre Mí
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
+              to={"/projects"}
+            >
+              Proyectos
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
+              to={"/habilities"}
+            >
+              Habilidades
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
+                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+              }
+              to={"/contact"}
+            >
+              Contacto
+            </NavLink>
+          </li>
+        </ul>
+
+        <div className="ml-auto flex items-center gap-3">
           <button
-              onClick={toggleDarkMode}
-              type="button"
-              className="flex items-center text-indigo-600 hover:text-indigo-900 text-2xl"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              {isDarkMode ? <FiSun className="w-5 h-5 mr-2" /> : <FiMoon className="w-5 h-5 mr-2" />}
-            </button>
-
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              onClick={toggleMenu}
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky"
-              aria-expanded={isMenuOpen ? "true" : "false"}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <div
-            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
-              isMenuOpen ? "block" : "hidden"
-            }`}
-            id="navbar-sticky"
+            onClick={toggleDarkMode}
+            className="relative flex h-8 w-8 items-center justify-center rounded-lg"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
           >
-            <ul className="flex flex-col text-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-indigo-700 rounded md:bg-transparent md:text-indigo-700 md:p-0 md:dark:text-indigo-500"
-                  aria-current="page"
-                >
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="w-5 h-5 text-secondary hover:text-primary cursor-pointer transition-colors"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            onClick={toggleMenu}
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary md:hidden"
+            type="button"
+            aria-expanded={isMenuOpen}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {isMenuOpen && (
+          <div className="relative md:hidden">
+            <div className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm md:hidden">
+              <div className="grid text-center">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
+                  to={"/aboutme"}
                 >
                   Sobre Mí
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                </NavLink>
+
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
+                  to={"/projects"}
                 >
                   Proyectos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                </NavLink>
+
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
+                  to={"/habilities"}
+                >
+                  Habilidades
+                </NavLink>
+
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
+                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
+                  }
+                  to={"/contact"}
                 >
                   Contacto
-                </a>
-              </li>
-            </ul>
+                </NavLink>
+              </div>
+            </div>
           </div>
-
-        </div>
+        )}
       </nav>
     </header>
   );

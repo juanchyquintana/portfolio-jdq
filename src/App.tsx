@@ -1,24 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Error404 from "./components/Error404";
+import Layouts from "./layouts/Layouts";
+import IndexPage from "./components/IndexPage";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-
         <Routes>
-          {/* <Route exact path="/" element={} /> */}
-          {/* <Route exact path="/aboutme" element={} /> */}
-          {/* <Route exact path="/projects" element={} /> */}
-          {/* <Route exact path="/contact" element={} /> */}
 
-          <Route  path="*" element={<Error404 />} />
+          <Route element={<Layouts />}>
+            <Route path="/" element={<IndexPage />} index />
+            <Route path="/aboutme" element={<IndexPage />} />
+          </Route>
+          
         </Routes>
-
-        <Footer />
       </BrowserRouter>
     </>
   );

@@ -8,7 +8,9 @@ export default function Layouts() {
       <Header />
 
       <main className="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6">
-        <Outlet />
+        <div className="">
+          <Outlet />
+        </div>
       </main>
 
       <Footer />

@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
 import CardProject from "./CardProject";
+import { useMemo } from "react";
 
 export default function IndexPage() {
+  const hasProjects = useMemo(() => projects.length, [projects]);
+
   return (
     <div className="flex flex-col gap-8">
       <section className="my-3 space-y-4">
@@ -99,13 +103,30 @@ export default function IndexPage() {
       <section className="my-3 space-y-4">
         <div className="space-y-4">
           <div className="flex justify-between items-center">
-            <h1 className="animate-in text-3xl font-bold tracking-tight uppercase">Proyectos</h1>
-            <Link className="uppercase font-bold text-gray-400 hover:text-gray-500" to={"/projects"}>Ver Más</Link>
+            <h1 className="animate-in text-3xl font-bold tracking-tight uppercase">
+              Proyectos
+            </h1>
+            <Link
+              className="uppercase font-bold text-gray-400 hover:text-gray-500"
+              to={"/projects"}
+            >
+              Ver Más
+            </Link>
           </div>
 
-          <div className="space-y-3">
-            <CardProject />
-          </div>
+          {hasProjects ? (
+            <>
+              <div className="space-y-3 mt-5">
+                {projects.slice(0, 3).map((project) => (
+                  <CardProject key={project.id} project={project} />
+                ))}
+              </div>
+            </>
+          ) : (
+            <p className="my-10 text-center text-blue-300 uppercase text-md">
+              No hay proyectos aún...
+            </p>
+          )}
         </div>
       </section>
     </div>

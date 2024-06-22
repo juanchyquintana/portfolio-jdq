@@ -11,7 +11,7 @@ export default function IndexPage() {
       <section className="my-3 space-y-4">
         <div className="space-y-4">
           <h1 className="animate-in text-3xl font-bold tracking-tight uppercase">
-            Hola, Juan Diego aquí!
+            ¡Hola, <span className="text-blue-500">Juan Diego</span> aquí!
           </h1>
           <p>
             Soy un <span className="font-bold">entusiasta</span> del desarrollo
@@ -102,12 +102,12 @@ export default function IndexPage() {
 
       <section className="my-3 space-y-4">
         <div className="space-y-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mb-10">
             <h1 className="animate-in text-3xl font-bold tracking-tight uppercase">
               Proyectos
             </h1>
             <Link
-              className="uppercase font-bold text-gray-400 hover:text-gray-500"
+              className="uppercase font-bold text-gray-400 hover:text-blue-500 transition-colors"
               to={"/projects"}
             >
               Ver Más

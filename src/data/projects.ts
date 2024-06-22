@@ -93,15 +93,6 @@ export const projects: ProjectsType[] = [
     role: "Backend Developer",
   },
   {
-    id: 11,
-    name: "Meeti - Clone",
-    description: "",
-    technologies: ["Javascript", "EJS", "CSS"],
-    projectLink: "",
-    repositoryLink: "https://github.com/juanchyquintana/meetiProject",
-    role: "Full Stack Developer",
-  },
-  {
     id: 12,
     name: "GuitarLA - TypeScript",
     description: "Este proyecto fue creado siguiendo el curso de Udemy sobre TypeScript.",
@@ -167,7 +158,7 @@ export const projects: ProjectsType[] = [
   {
     id: 19,
     name: "Bebidas React",
-    description: "",
+    description: "Este proyecto es una aplicacion para consultar recetas de bebidas. Estas consultas las realizo con Axios.",
     technologies: ["React.js", "Typescript", "Tailwindcss", "Axios", "Zod", "Zustand", "Heroicons", "Headlessui"],
     projectLink: "",
     repositoryLink: "https://github.com/juanchyquintana/bebidas-react-ts",

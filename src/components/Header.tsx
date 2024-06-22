@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="md:mt-6">
+    <header className="md:mt-6 border-b-2 border-blue-500 shadow-lg">
       <nav className="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6">
         <Link className="shrink-0 text-blue-500" to={"/"}>
           <img src={pittyLogo} alt="Logo de JDQ" className="h-20" />

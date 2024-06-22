@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import CardProject from "./CardProject";
 import { useMemo } from "react";
+import Skills from "./Skills";
 
 export default function IndexPage() {
   const hasProjects = useMemo(() => projects.length, [projects]);
@@ -104,7 +105,7 @@ export default function IndexPage() {
         <div className="space-y-4">
           <div className="flex justify-between items-center mb-10">
             <h1 className="animate-in text-3xl font-bold tracking-tight uppercase">
-              Proyectos
+              P R O Y E C T O S
             </h1>
             <Link
               className="uppercase font-bold text-gray-400 hover:text-blue-500 transition-colors"
@@ -128,6 +129,10 @@ export default function IndexPage() {
             </p>
           )}
         </div>
+      </section>
+
+      <section className="my-3 space-y-4" id="skills">
+        <Skills  />
       </section>
     </div>
   );

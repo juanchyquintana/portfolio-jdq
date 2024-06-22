@@ -54,18 +54,6 @@ export default function Header() {
                   ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
                   : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
               }
-              to={"/habilities"}
-            >
-              Habilidades
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
-                  : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
-              }
               to={"/contact"}
             >
               Contacto
@@ -140,17 +128,6 @@ export default function Header() {
                   to={"/projects"}
                 >
                   Proyectos
-                </NavLink>
-
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive
-                      ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 transition-colors"
-                      : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
-                  }
-                  to={"/habilities"}
-                >
-                  Habilidades
                 </NavLink>
 
                 <NavLink

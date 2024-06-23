@@ -14,6 +14,7 @@ export default function CardProject({ project }: CardProjectProps) {
     <div className="border shadow-lg rounded-lg flex flex-col h-full">
       <div className="p-4 flex-grow">
         <h2 className="text-2xl text-center font-black mb-5 text-blue-500">{project.name}</h2>
+
         <p className="text-gray-500">{project.description}</p>
 
         {isProjects && (

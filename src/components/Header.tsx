@@ -64,7 +64,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-3">
           <button
             onClick={toggleDarkMode}
-            className="relative flex h-8 w-8 items-center justify-center rounded-lg"
+            className="relative flex h-8 w-8 items-center justify-center rounded-lg hover:text-blue-500"
             type="button"
             aria-haspopup="listbox"
             aria-expanded="false"

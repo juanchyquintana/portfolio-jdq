@@ -106,7 +106,7 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="relative md:hidden">
-            <div className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm md:hidden">
+            <div className="absolute right-0 z-10 mt-5 w-40 origin-top-right overflow-auto rounded-xl bg-white p-2 text-base shadow-md focus:outline-none sm:text-sm md:hidden">
               <div className="grid text-center">
                 <NavLink
                   className={({ isActive }) =>

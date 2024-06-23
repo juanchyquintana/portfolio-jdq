@@ -5,17 +5,26 @@ import { Link } from "react-router-dom";
 
 export default function Aboutme() {
   return (
-    <section className="hidden md:flex bg-white p-8 rounded-lg shadow-lg mx-auto mt-10">
-      <div className="w-1/3 hidden lg:flex justify-center items-center">
+    <section className="flex bg-white p-8 rounded-lg shadow-lg mx-auto mt-10">
+      <div className="w-1/3 hidden lg:flex lg:flex-col justify-center items-center">
         <img
           src={profilePhoto}
           alt="Juan Diego Quintana"
-          className="rounded-full shadow-lg w-3/4 border-2 border-blue-500" 
+          className="rounded-full shadow-lg w-3/4 border-2 border-blue-500"
         />
+
+        <div className="mt-8 bg-blue-950 text-blue-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <a href="/cv_juan_diego_quintana.pdf" download>
+            <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+            Descargar CV
+          </a>
+        </div>
       </div>
 
       <div className="lg:w-2/3 pl-8">
-        <h2 className="text-3xl font-bold text-black mb-4 text-center uppercase animate-bounce">¡Hola, <span className="text-blue-500">Internauta</span>!</h2>
+        <h2 className="text-3xl font-bold text-black mb-4 text-center uppercase animate-bounce">
+          ¡Hola, <span className="text-blue-500">Internauta</span>!
+        </h2>
 
         <p className="text-gray-700 mb-4">
           Mi nombre es Juan Diego Quintana, un programador en formación con sede
@@ -42,16 +51,36 @@ export default function Aboutme() {
         </h3>
         <ul className="list-disc list-inside text-gray-700 mb-4 space-y-3">
           <li>
-            <strong>Messiento Vintage</strong>: "Las camisetas vintage no solo visten, sino que cuentan la historia de quienes las llevaron antes." En esta tarea, practiqué todas las habilidades aprendidas en el curso y este fue mi primer trabajo con mi equipo. El Scrum Master dividió las tareas para cada compañero de equipo. Hice la página 404 y sobre nosotros. También hice el logotipo y el fondo.
+            <strong>Messiento Vintage</strong>: "Las camisetas vintage no solo
+            visten, sino que cuentan la historia de quienes las llevaron antes."
+            En esta tarea, practiqué todas las habilidades aprendidas en el
+            curso y este fue mi primer trabajo con mi equipo. El Scrum Master
+            dividió las tareas para cada compañero de equipo. Hice la página 404
+            y sobre nosotros. También hice el logotipo y el fondo.
           </li>
           <li>
-            <strong>Ritmo Web</strong>: En este proyecto se trabajó en grupo y nos dividimos las tareas necesarias para diseñar un sitio que permita administrar canciones. El alcance de este proyecto se centró en cómo realizar todos los pasos del CRUD y mostrará los datos en forma de un catálogo de música. Por otro lado, se cumplieron otros requisitos solicitados.
+            <strong>Ritmo Web</strong>: En este proyecto se trabajó en grupo y
+            nos dividimos las tareas necesarias para diseñar un sitio que
+            permita administrar canciones. El alcance de este proyecto se centró
+            en cómo realizar todos los pasos del CRUD y mostrará los datos en
+            forma de un catálogo de música. Por otro lado, se cumplieron otros
+            requisitos solicitados.
           </li>
           <li>
-            <strong>Lotus Restaurante</strong>: Este proyecto utilizamos el stack MERN para crear un sistema de gestión para un restaurante de cocina China llamado Lotus Restaurante. En este proyecto logré la implementacion de un mapa para elegir una ubicación en el mapa con Leaflet. Así como también en la lógica del backend y parte del frontend.
+            <strong>Lotus Restaurante</strong>: Este proyecto utilizamos el
+            stack MERN para crear un sistema de gestión para un restaurante de
+            cocina China llamado Lotus Restaurante. En este proyecto logré la
+            implementacion de un mapa para elegir una ubicación en el mapa con
+            Leaflet. Así como también en la lógica del backend y parte del
+            frontend.
           </li>
           <li>
-            <Link to={"/projects"} className="text-blue-200 hover:text-blue-500 uppercase font-semibold">Ver más proyectos</Link>
+            <Link
+              to={"/projects"}
+              className="text-blue-200 hover:text-blue-500 uppercase font-semibold"
+            >
+              Ver más proyectos
+            </Link>
           </li>
         </ul>
 
@@ -86,7 +115,9 @@ export default function Aboutme() {
           y a mantenerme motivado y creativo.
         </p>
 
-        <h3 className="text-xl font-bold uppercase text-gray-800 mb-3">Contacto</h3>
+        <h3 className="text-xl font-bold uppercase text-gray-800 mb-3">
+          Contacto
+        </h3>
         <div className="flex items-center text-gray-700 mb-4">
           <HiMail className="mr-2" />
           <span>quintanajuanchy25@gmail.com</span>
@@ -98,6 +129,13 @@ export default function Aboutme() {
             className="text-blue-500 hover:underline"
           >
             Juan Diego Quintana
+          </a>
+        </div>
+
+        <div className="mt-8 text-center lg:hidden bg-blue-950 text-blue-400 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-blue-400 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-80 h-[8px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+          <a href="/cv_juan_diego_quintana.pdf" download>
+            Descargar CV
           </a>
         </div>
       </div>

@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import profilePhoto from "../img/Perfil_Foto_Juan.jpeg";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { HiMail } from "react-icons/hi";
+import { motion } from "framer-motion";
+import profilePhoto from "../img/Perfil_Foto_Juan.jpeg";
 
 export default function Aboutme() {
   const [ref, inView] = useInView({

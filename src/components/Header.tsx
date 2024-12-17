@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import pittyLogo from "../img/LogoPittyDev.png";
 import { Link, NavLink } from "react-router-dom";
 
@@ -11,9 +11,12 @@ export default function Header() {
   };
 
   const toggleDarkMode = () => {
-    // TO DO: add function
-    console.log("Hooola");
+    setIsDarkMode((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    isDarkMode ? document.body.classList.add("dark") : document.body.classList.remove("dark");
+  }, [isDarkMode]);
 
   return (
     <header className="md:mt-6 border-b-2 border-blue-500 shadow-lg">
@@ -64,7 +67,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-3">
           <button
             onClick={toggleDarkMode}
-            className="relative flex h-8 w-8 items-center justify-center rounded-lg hover:text-blue-500"
+            className="relative flex h-8 w-8 items-center justify-center rounded-lg hover:text-blue-500 dark:text-gray-300"
             type="button"
             aria-haspopup="listbox"
             aria-expanded="false"
@@ -73,7 +76,7 @@ export default function Header() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="w-5 h-5 text-secondary hover:text-primary cursor-pointer transition-colors"
+              className="w-5 h-5 text-secondary hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-500 cursor-pointer transition-colors"
             >
               <path
                 fillRule="evenodd"

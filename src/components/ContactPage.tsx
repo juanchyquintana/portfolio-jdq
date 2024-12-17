@@ -5,7 +5,7 @@ export default function ContactPage() {
       action={`https://formspree.io/f/${import.meta.env.VITE_ID_FORM}`}
       method="POST"
       target="_blank"
-      className=" mx-auto p-6 bg-white shadow-md rounded-md"
+      className=" mx-auto p-6 my-20 bg-white shadow-md rounded-md"
     >
       <label htmlFor="name" className="block mb-2">Name:</label>
       <input

@@ -61,7 +61,7 @@ export default function IndexPage() {
           </p>
           <div className="flex">
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://www.linkedin.com/in/juan-diego-quintana-b5a186211/"
             >
@@ -83,7 +83,7 @@ export default function IndexPage() {
             </Link>
 
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://www.instagram.com/juanchyquintana/"
             >
@@ -105,7 +105,7 @@ export default function IndexPage() {
             </Link>
 
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full bg-secondary px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://github.com/juanchyquintana"
             >
@@ -178,7 +178,7 @@ export default function IndexPage() {
 
       <InView
         as="section"
-        className=" flex items-center my-10"
+        className="flex items-center my-10"
         onChange={(inView) => {
           if (!inView) {
             controls3.start("hidden");
@@ -195,7 +195,7 @@ export default function IndexPage() {
             hidden: { opacity: 0, y: 100 },
           }}
           transition={{ duration: 0.5 }}
-          className="space-y-4"
+          className="space-y-4 w-full"
         >
           <Skills />
         </motion.div>

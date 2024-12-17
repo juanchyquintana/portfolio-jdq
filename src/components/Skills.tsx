@@ -19,12 +19,12 @@ import {
 export default function Skills() {
   return (
     <>
-      <h2 className="text-3xl font-bold text-gray-800 mb-8">
+      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-300 mb-8">
         H A B I L I D A D E S
       </h2>
       <section className="bg-white p-8 rounded-lg shadow-lg mx-auto mt-10 space-y-10">
         <div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">
             Hard Skills
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -97,10 +97,10 @@ export default function Skills() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">
             Soft Skills
           </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
             <li>Autodidacta</li>
             <li>Trabajo en equipo</li>
             <li>Gestión de equipo</li>

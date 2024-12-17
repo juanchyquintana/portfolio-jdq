@@ -5,6 +5,9 @@ import { useMemo } from "react";
 import Skills from "./Skills";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
+import {
+  FaPlus
+} from "react-icons/fa6";
 
 export default function IndexPage() {
   const hasProjects = useMemo(() => projects.length, [projects]);
@@ -155,7 +158,7 @@ export default function IndexPage() {
               className="uppercase font-bold text-gray-400 hover:text-blue-500 transition-colors"
               to={"/projects"}
             >
-              Ver Más
+              <FaPlus />
             </Link>
           </div>
 

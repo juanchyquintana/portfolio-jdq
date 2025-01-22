@@ -30,28 +30,28 @@ function Footer() {
           <Link
             to="https://twitter.com/juanchyquintana"
             target="_blank"
-            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-blue-700 hover:border-blue-700 text-2xl"
+            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-gray-700 hover:border-gray-700 text-2xl"
           >
             <FaXTwitter />
           </Link>
           <Link
             to="https://www.instagram.com/juanchyquintana"
             target="_blank"
-            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-blue-700 hover:border-blue-700 text-2xl"
+            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-gray-700 hover:border-gray-700 text-2xl"
           >
             <BsInstagram />
           </Link>
           <Link
             to="https://github.com/juanchyquintana"
             target="_blank"
-            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-blue-700 hover:border-blue-700 text-2xl"
+            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-gray-700 hover:border-gray-700 text-2xl"
           >
             <BsGithub />
           </Link>
           <Link
             to="https://www.linkedin.com/in/juan-diego-quintana-b5a186211/"
             target="_blank"
-            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-blue-700 hover:border-blue-700 text-2xl"
+            className="text-blue-600 border-2 border-transparent rounded-lg p-1 hover:text-gray-700 hover:border-gray-700 text-2xl"
           >
             <BsLinkedin />
           </Link>

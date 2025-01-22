@@ -26,19 +26,19 @@ export default function Header() {
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
-          <li>
+          <li className="hover:border-b-2 hover:border-blue-500 hover:transition">
             <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "px-4 py-2 rounded-lg text-md font-bold uppercase text-blue-500 hover:text-blue-900 transition-colors"
                   : "px-4 py-2 rounded-lg text-md font-bold uppercase hover:text-blue-500 transition-colors"
-              }
+               }
               to={"/aboutme"}
             >
               Sobre Mí
             </NavLink>
           </li>
-          <li>
+          <li className="hover:border-b-2 hover:border-blue-500 hover:transition">
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -50,7 +50,7 @@ export default function Header() {
               Proyectos
             </NavLink>
           </li>
-          <li>
+          <li className="hover:border-b-2 hover:border-blue-500 hover:transition">
             <NavLink
               className={({ isActive }) =>
                 isActive

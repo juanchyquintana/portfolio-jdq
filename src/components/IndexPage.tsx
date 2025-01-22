@@ -5,9 +5,7 @@ import { useMemo } from "react";
 import Skills from "./Skills";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
-import {
-  FaPlus
-} from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
 
 export default function IndexPage() {
   const hasProjects = useMemo(() => projects.length, [projects]);
@@ -43,25 +41,28 @@ export default function IndexPage() {
           <h1 className="text-3xl font-bold tracking-tight uppercase">
             ¡Hola, <span className="text-blue-500">Juan Diego</span> aquí!
           </h1>
-          <p>
-            Soy un <span className="font-bold">entusiasta</span> del desarrollo
-            web con un enfoque en la creación de experiencias digitales de alta
-            calidad y gran impacto. Me{" "}
-            <span className="font-bold">apasionan </span>
-            los proyectos desafiantes que me permiten aplicar mis habilidades
-            técnicas y creativas para desarrollar soluciones web excepcionales.
-          </p>
-          <p>
-            Busco <span className="font-bold">colaborar </span> con un equipo
-            talentoso en un entorno innovador donde pueda contribuir con mis
-            capacidades para crear productos web sobresalientes. Mi{" "}
-            <span className="font-bold">objetivo </span> es crecer
-            profesionalmente y contribuir significativamente al éxito de los
-            proyectos en los que me involucre.
-          </p>
-          <div className="flex">
+          <div className="space-y-5">
+            <p>
+              Soy un <span className="font-bold">entusiasta</span> del
+              desarrollo web con un enfoque en la creación de experiencias
+              digitales de alta calidad y gran impacto. Me{" "}
+              <span className="font-bold">apasionan </span>
+              los proyectos desafiantes que me permiten aplicar mis habilidades
+              técnicas y creativas para desarrollar soluciones web
+              excepcionales.
+            </p>
+            <p>
+              Busco <span className="font-bold">colaborar </span> con un equipo
+              talentoso en un entorno innovador donde pueda contribuir con mis
+              capacidades para crear productos web sobresalientes. Mi{" "}
+              <span className="font-bold">objetivo </span> es crecer
+              profesionalmente y contribuir significativamente al éxito de los
+              proyectos en los que me involucre.
+            </p>
+          </div>
+          <div className="flex gap-2">
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline border-b-2 border-blue-500 hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://www.linkedin.com/in/juan-diego-quintana-b5a186211/"
             >
@@ -83,7 +84,7 @@ export default function IndexPage() {
             </Link>
 
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline border-b-2 border-blue-500 hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://www.instagram.com/juanchyquintana/"
             >
@@ -105,7 +106,7 @@ export default function IndexPage() {
             </Link>
 
             <Link
-              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline hover:bg-blue-500 hover:text-white"
+              className="underline-offset-4 flex w-fit items-center rounded-full px-3 py-1 no-underline border-b-2 border-blue-500 hover:bg-blue-500 hover:text-white"
               target="_blank"
               to="https://github.com/juanchyquintana"
             >

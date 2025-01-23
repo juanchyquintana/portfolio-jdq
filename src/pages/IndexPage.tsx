@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-import { projects } from "../data/projects";
-import CardProject from "./CardProject";
-import { useMemo } from "react";
-import Skills from "./Skills";
-import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { projects } from "../data/projects";
+import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
+import { useMemo } from "react";
+
+import CardProject from "../components/Projects/CardProject";
+import Skills from "../components/Skills";
 
 export default function IndexPage() {
   const hasProjects = useMemo(() => projects.length, [projects]);

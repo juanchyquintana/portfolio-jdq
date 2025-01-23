@@ -1,4 +1,4 @@
-import { ProjectsType } from "../types";
+import { ProjectsType } from "../../types";
 import { Link } from "react-router-dom";
 
 type ProjectsProps = {

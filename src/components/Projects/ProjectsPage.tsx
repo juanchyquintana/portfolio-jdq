@@ -1,6 +1,6 @@
 import { InView, useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import { projects } from "../data/projects";
+import { projects } from "../../data/projects";
 import { useEffect } from "react";
 import Projects from "./Projects";
 

@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { projects } from "../data/projects";
-import Error404 from "./Error404";
+import { projects } from "../../data/projects";
+import Error404 from "../../common/Error404";
 import { Fragment } from "react/jsx-runtime";
 import { useMemo } from "react";
 
@@ -37,7 +37,15 @@ export default function ModalProjectDetail() {
           </button>
         </div>
 
-        <div className="flex justify-center w-auto px-4">
+        <div className="w-full border-b-2 border-blue-200 mb-3 shadow-lg">
+          <img
+            className="object-cover w-full rounded-t-lg md:rounded-none md:rounded-s-lg"
+            src={project?.image}
+            alt={project?.name}
+          />
+        </div>
+
+        <div className="text-center italic">
           <p>{project?.description}</p>
         </div>
 

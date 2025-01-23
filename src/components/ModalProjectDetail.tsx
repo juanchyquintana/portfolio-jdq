@@ -19,11 +19,11 @@ export default function ModalProjectDetail() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 overflow-hidden"
       onClick={() => navigate(-1)}
     >
       <div
-        className="bg-white rounded-lg shadow-lg p-6"
+        className="bg-white rounded-lg shadow-lg p-6 m-6 max-w-md md:m-0 lg:max-w-lg"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center mb-3 border-b-2 border-blue-200 pb-2">
@@ -37,7 +37,9 @@ export default function ModalProjectDetail() {
           </button>
         </div>
 
-        <p>{project?.description}</p>
+        <div className="flex justify-center w-auto px-4">
+          <p>{project?.description}</p>
+        </div>
 
         {isProjects && (
           <div className="flex flex-col my-5">

@@ -4,7 +4,6 @@ import { projects } from "../../data/projects";
 import { useEffect, useState } from "react";
 import Projects from "./Projects";
 import FilterButton from "../FilterButton";
-import { div } from "framer-motion/client";
 
 export default function ProjectsPage() {
   const [filteredProjects, setFilteredProjects] = useState(projects);

@@ -8,3 +8,8 @@ export type ProjectsType = {
     role: string,
     image?: string,
 }
+
+export type FilterButtonType = {
+    name: string;
+    role: string;
+}

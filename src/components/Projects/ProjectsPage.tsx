@@ -1,10 +1,13 @@
 import { InView, useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { projects } from "../../data/projects";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Projects from "./Projects";
+import FilterButton from "../FilterButton";
 
 export default function ProjectsPage() {
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+
   const controls = useAnimation();
   const { inView } = useInView({
     triggerOnce: true,
@@ -26,8 +29,12 @@ export default function ProjectsPage() {
         desde mis comienzos como autodidacta hasta la actualidad.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-        {projects.map((project, index) => (
+      <div className="flex justify-center my-3">
+        <FilterButton projects={projects} setFilteredProjects={setFilteredProjects} />
+      </div>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+        {filteredProjects.map((project, index) => (
           <InView key={project.id} triggerOnce>
             {({ inView, ref }) => (
               <motion.div
@@ -46,7 +53,7 @@ export default function ProjectsPage() {
             )}
           </InView>
         ))}
-      </div>
+      </section>
     </>
   );
 }

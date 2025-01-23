@@ -1,5 +1,5 @@
 import { Fragment, useMemo } from "react";
-import { ProjectsType } from "../types";
+import { ProjectsType } from "../../types";
 import { useLocation } from "react-router-dom";
 
 type CardProjectProps = {

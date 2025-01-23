@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../common/Header";
+import Footer from "../common/Footer";
 import { useMemo } from "react";
 
 export default function Layouts() {
@@ -19,7 +19,7 @@ export default function Layouts() {
           isAboutMePage ? "md:max-w-[1300px]" : "max-w-[700px]"
         }`}
       >
-        <div className="">
+        <div>
           <Outlet />
         </div>
       </main>

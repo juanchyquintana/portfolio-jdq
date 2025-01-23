@@ -4,6 +4,7 @@ import { projects } from "../../data/projects";
 import { useEffect, useState } from "react";
 import Projects from "./Projects";
 import FilterButton from "../FilterButton";
+import { div } from "framer-motion/client";
 
 export default function ProjectsPage() {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -30,30 +31,42 @@ export default function ProjectsPage() {
       </p>
 
       <div className="flex justify-center my-3">
-        <FilterButton projects={projects} setFilteredProjects={setFilteredProjects} />
+        <FilterButton
+          projects={projects}
+          setFilteredProjects={setFilteredProjects}
+        />
       </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-        {filteredProjects.map((project, index) => (
-          <InView key={project.id} triggerOnce>
-            {({ inView, ref }) => (
-              <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={{
-                  visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: 50 },
-                }}
-                transition={{ duration: 0.5, delay: index * 0.1 }} // Añade un pequeño delay a cada proyecto
-                className="w-full"
-              >
-                <Projects project={project} />
-              </motion.div>
-            )}
-          </InView>
-        ))}
-      </section>
+      <div>
+        {filteredProjects.length === 0 ? (
+
+            <p className="text-center font-bold text-lg my-52">
+              No hay proyectos para mostrar
+            </p>
+        ) : (
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+            {filteredProjects.map((project, index) => (
+              <InView key={project.id} triggerOnce>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={{
+                      visible: { opacity: 1, y: 0 },
+                      hidden: { opacity: 0, y: 50 },
+                    }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="w-full"
+                  >
+                    <Projects project={project} />
+                  </motion.div>
+                )}
+              </InView>
+            ))}
+          </section>
+        )}
+      </div>
     </>
   );
 }

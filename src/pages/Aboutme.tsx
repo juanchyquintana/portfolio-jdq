@@ -1,7 +1,6 @@
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiMail } from "react-icons/hi";
-import profilePhoto from "../img/Perfil_Foto_Juan.jpeg";
 
 export default function Aboutme() {
   return (
@@ -18,7 +17,7 @@ export default function Aboutme() {
             className={`w-3/4 border-2 border-blue-500 rounded-full shadow-lg overflow-hidden transform transition-all duration-500`}
           >
             <img
-              src={profilePhoto}
+              src="https://i.imgur.com/2BIshCW.jpeg"
               alt="Juan Diego Quintana"
               className="w-full h-full object-cover"
             />

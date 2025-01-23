@@ -2,7 +2,7 @@ import { InView, useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { projects } from "../data/projects";
 import { useEffect } from "react";
-import CardProject from "./CardProject";
+import Projects from "./Projects";
 
 export default function ProjectsPage() {
   const controls = useAnimation();
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
         desde mis comienzos como autodidacta hasta la actualidad.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
         {projects.map((project, index) => (
           <InView key={project.id} triggerOnce>
             {({ inView, ref }) => (
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }} // Añade un pequeño delay a cada proyecto
                 className="w-full"
               >
-                <CardProject project={project} />
+                <Projects project={project} />
               </motion.div>
             )}
           </InView>

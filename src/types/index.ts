@@ -5,5 +5,6 @@ export type ProjectsType = {
     technologies: string[],
     projectLink: string,
     repositoryLink: string,
-    role: string
+    role: string,
+    image?: string,
 }
